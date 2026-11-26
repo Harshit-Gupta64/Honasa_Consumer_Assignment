@@ -1,0 +1,7 @@
+channel,label,confidence_tier,baseline_2025_q_cr,bound_min_50pct_cr,bound_max_150pct_cr,recommended_q1_2026_cr,delta_cr,change_pct,share_pct,bound_status,exp_inc_rev_25wk_cr,exp_inc_rev_25wk_ci90,ar_at_rec,mroas_at_sq_med,mroas_at_rec_med
+meta_spend,Meta,HIGH (Experiment-Anchored),4.926,2.463,7.389,6.023,1.098,22.3,37.6,INTERIOR,8.177,"[5.766, 10.681]",1.358,0.911,0.778
+google_search_spend,Google Search,LOW,2.313,1.156,3.469,2.106,-0.207,-9.0,13.2,INTERIOR,2.474,"[0.307, 7.24]",1.175,0.627,0.677
+youtube_spend,YouTube,MODERATE,0.961,0.48,1.441,1.441,0.48,50.0,9.0,AT_UPPER_150%,2.865,"[0.627, 6.101]",1.988,1.547,1.181
+influencer_spend,Influencer,MODERATE-HIGH,1.19,0.595,1.786,1.786,0.595,50.0,11.2,AT_UPPER_150%,5.723,"[3.61, 8.188]",3.205,2.189,1.559
+tv_spend,TV,LOW,2.453,1.226,3.679,1.892,-0.56,-22.9,11.8,INTERIOR,1.63,"[0.933, 2.613]",0.862,0.727,0.77
+amazon_ads_spend,Amazon Ads,MODERATE,4.16,2.08,6.239,2.752,-1.407,-33.8,17.2,INTERIOR,3.309,"[0.68, 7.631]",1.202,0.598,0.804

@@ -1,0 +1,191 @@
+{
+  "raw_rows": 157,
+  "raw_cols": 19,
+  "anomalies": {
+    "duplicate_weeks": {
+      "count": 1,
+      "weeks": [
+        "2025-03-10"
+      ],
+      "exact_row_match": true,
+      "post_dedup_rows": 156,
+      "date_range": [
+        "2023-01-02",
+        "2025-12-22"
+      ],
+      "day_spacing_counts": {
+        "7": 155
+      },
+      "monday_weeks_per_calendar_year": {
+        "2023": 52,
+        "2024": 53,
+        "2025": 51
+      },
+      "iso_boundary_note": "Monday 2024-12-30 carries calendar year=2024 (ISO week 1 of 2025), giving 2024 53 Mondays and calendar-2025 51 Mondays (2025-01-06 to 2025-12-22)."
+    },
+    "meta_q4_2023_unit_error": {
+      "count": 13,
+      "start_week": "2023-10-02",
+      "end_week": "2023-12-25",
+      "raw_cpm_mean": 0.0013794376652002146,
+      "normal_cpm_mean": 138.91353290812336,
+      "normal_cpm_median": 139.67663116399285,
+      "fixed_cpm_mean": 137.94376652002143,
+      "fixed_cpm_median": 137.46793347082337,
+      "ks_stat_vs_adjacent_quarters": 0.3077,
+      "ks_pval_vs_adjacent_quarters": 0.3681,
+      "spend_before_inr": 405.17,
+      "spend_after_inr": 40517000.0,
+      "spend_restored_inr": 40516594.83
+    },
+    "tv_negative_spend": {
+      "count": 1,
+      "rows": [
+        {
+          "week_start": "2024-11-11",
+          "tv_spend": -1250000.0
+        }
+      ],
+      "physical_treatment": "Set to 0.0 INR (post-flight billing credit/make-good after 5-week Diwali 2024 flight; 0 media aired).",
+      "net_cost_treatment": "Rebate of \u20b91,250,000 (2.07%) allocated pro-rata across 2024-10-07..2024-11-04 (factor=0.979348) in `tv_spend_net_cost`.",
+      "preceding_flight_gross_spend_inr": 60527198.0,
+      "preceding_flight_net_spend_inr": 59277198.00000001
+    },
+    "youtube_missing_spend": {
+      "count": 4,
+      "imputation_method": "Strictly causal trailing-8-active-week median CPM (zero future lookahead)",
+      "active_cpm_mean": 90.35,
+      "active_cpm_sd": 7.42,
+      "imputed_rows": [
+        {
+          "row_idx": 58,
+          "week_start": "2024-02-12",
+          "youtube_impressions": 7851832,
+          "causal_trailing8_median_cpm": 88.29,
+          "causal_expanding_log_cpm_sd": 0.0744,
+          "n_prior_active_weeks": 53,
+          "imputed_spend_inr": 693226.85
+        },
+        {
+          "row_idx": 59,
+          "week_start": "2024-02-19",
+          "youtube_impressions": 12377401,
+          "causal_trailing8_median_cpm": 88.29,
+          "causal_expanding_log_cpm_sd": 0.0744,
+          "n_prior_active_weeks": 53,
+          "imputed_spend_inr": 1092782.77
+        },
+        {
+          "row_idx": 83,
+          "week_start": "2024-08-05",
+          "youtube_impressions": 11209357,
+          "causal_trailing8_median_cpm": 83.64,
+          "causal_expanding_log_cpm_sd": 0.08,
+          "n_prior_active_weeks": 74,
+          "imputed_spend_inr": 937586.43
+        },
+        {
+          "row_idx": 125,
+          "week_start": "2025-05-26",
+          "youtube_impressions": 8673237,
+          "causal_trailing8_median_cpm": 93.22,
+          "causal_expanding_log_cpm_sd": 0.081,
+          "n_prior_active_weeks": 113,
+          "imputed_spend_inr": 808494.29
+        }
+      ],
+      "total_imputed_spend_inr": 3532090.34,
+      "genuine_dark_weeks_zero_spend_zero_imp": 11
+    }
+  },
+  "lift_test_spend_accounting": {
+    "csv_meta_spend_6wk_sum_inr": 22295980.0,
+    "holdout_share_times_sum_inr": 4459196.0,
+    "reported_spend_withheld_inr": 4459000.0,
+    "ratio_020_vs_reported": 1.00004,
+    "note": "0.20 * sum(meta_spend_6wk) = \u20b94,459,196 matches reported spend_withheld_inr = \u20b94,459,000 (rounded to \u20b91,000), confirming CSV spend reflects planned national run-rate intensity S_act."
+  },
+  "secondary_checks": {
+    "influencer_flighting": {
+      "median_weekly_spend_inr": 235707.0,
+      "p90_weekly_spend_inr": 3241020.0,
+      "max_weekly_spend_inr": 6535720.0,
+      "weeks_above_1m": 48
+    },
+    "tv_flighting": {
+      "active_weeks": 27,
+      "zero_weeks": 129,
+      "active_mean_inr": 10248342.481481481,
+      "active_range_inr": [
+        6517718.0,
+        13766438.0
+      ]
+    },
+    "aov_trend": {
+      "2023_mean": 534.72,
+      "2024_mean": 565.02,
+      "2025_mean": 597.52
+    },
+    "price_index_trend": {
+      "2023_mean": 101.23,
+      "2024_mean": 105.61,
+      "2025_mean": 109.58
+    },
+    "remaining_nulls_core_cols": 0
+  },
+  "quarterly_baseline_reconciliation": {
+    "n_weeks_cal_2025": 51,
+    "n_weeks_trailing_52": 52,
+    "totals_cr": {
+      "cal_2025_51w_total": 64.01,
+      "cal_2025_51w_div4": 16.003,
+      "cal_2025_51w_rate13": 16.316,
+      "trailing_52w_total": 65.084,
+      "trailing_52w_div4": 16.271
+    },
+    "channels": {
+      "meta_spend": {
+        "label": "Meta",
+        "spend_2025_51wk_total_cr": 19.7047,
+        "cal_2025_51w_div4_cr": 4.9262,
+        "cal_2025_51w_rate13_cr": 5.0228,
+        "trailing_52w_div4_cr": 5.0155
+      },
+      "google_search_spend": {
+        "label": "Google Search",
+        "spend_2025_51wk_total_cr": 9.2507,
+        "cal_2025_51w_div4_cr": 2.3127,
+        "cal_2025_51w_rate13_cr": 2.358,
+        "trailing_52w_div4_cr": 2.3408
+      },
+      "youtube_spend": {
+        "label": "YouTube",
+        "spend_2025_51wk_total_cr": 3.8424,
+        "cal_2025_51w_div4_cr": 0.9606,
+        "cal_2025_51w_rate13_cr": 0.9794,
+        "trailing_52w_div4_cr": 0.9835
+      },
+      "influencer_spend": {
+        "label": "Influencer",
+        "spend_2025_51wk_total_cr": 4.7619,
+        "cal_2025_51w_div4_cr": 1.1905,
+        "cal_2025_51w_rate13_cr": 1.2138,
+        "trailing_52w_div4_cr": 1.2406
+      },
+      "tv_spend": {
+        "label": "TV",
+        "spend_2025_51wk_total_cr": 9.812,
+        "cal_2025_51w_div4_cr": 2.453,
+        "cal_2025_51w_rate13_cr": 2.5011,
+        "trailing_52w_div4_cr": 2.453
+      },
+      "amazon_ads_spend": {
+        "label": "Amazon Ads",
+        "spend_2025_51wk_total_cr": 16.6385,
+        "cal_2025_51w_div4_cr": 4.1596,
+        "cal_2025_51w_rate13_cr": 4.2412,
+        "trailing_52w_div4_cr": 4.2375
+      }
+    }
+  }
+}
